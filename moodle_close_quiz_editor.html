@@ -1,0 +1,103 @@
+<html>
+<head>
+<title>home test</title>
+
+<script type="text/javascript" src="js/encode.js"></script>
+<script type="text/javascript" src="js/dialog.js"></script>
+<script type="text/javascript" src="js/parse.js"></script>
+<script type="text/javascript" src="js/parseHelper.js"></script>
+
+<script type="text/javascript" src="js/parseAnswer.js"></script>
+<script type="text/javascript" src="js/parseFeedback.js"></script>
+<script type="text/javascript" src="js/parsePercentage.js"></script>
+<script type="text/javascript" src="js/parseThrottle.js"></script>
+
+
+<script>
+var longstring = "{1:MULTICHOICE:%0%global delivery system#feedback1~%100%local management system#feedback2~%0%communal drainage system#feedback3~%0%state funding system#feedback4}";
+//var longstring = "{1:MULTICHOICE:%0%a#~%100%b#~%0%c#~%0%d#~%0%a#~%100%b#~%0%c#~%0%d#}";
+//longstring = "{1:NUMERICAL:%100%23:1#~%0%23:2#~%0%23:3#}";
+longstring = "{2:NUMERICAL:%100%23.8:0.1#Feedback for correct answer 23.8~%50%23.8:2#Feedback for half credit answer in the nearby region of the correct answer}";
+</script>
+
+<link rel="stylesheet" type="text/css" href="sheet.css">
+
+</head>
+
+<body onload="loadContent(); ">
+
+<form name="Formular">
+	<fieldset>
+		<div id="top">
+			<div id="quiztype">
+				<label>Type of quiz question:</label>
+				<select name="quizType" onchange="toggleThrottle(); " >
+					<option value="SHORTANSWER">Shortanswer</option>
+					<option value="SHORTANSWER_C">Shortanswer_c</option>
+					<option value="MULTICHOICE">Multichoice</option>
+					<option value="MULTICHOICE_V">Multichoice_V</option>
+					<option value="MULTICHOICE_H">Multichoice_H</option>
+					<option value="NUMERICAL">Numerical</option>
+				</select>
+			</div>
+	
+			<div id="question_weight">
+				<label>Weight of question:</label>
+				<input size=4 type="text" name="weighting" value="1" />
+			</div>
+		</div>
+	</fieldset>
+  
+	
+
+	<table id="main_table">
+		<tbody>
+			<tr>
+				<th class="table_value">Row</th>
+				<th class="table_value">Answer</th>
+				<th class="table_value_throttle">Throttle</th>
+				<th class="table_value">Correctness</th>
+				<th class="table_value">Percent</th>
+				<th class="table_value">Feedback</th>
+			</tr>
+		</tbody>
+	</table>        
+</form>
+
+<div id="row_management">
+	<input type="button" id="addRow" 	name="addline"    value="Add row" 		onclick="addRow('main_table');" />
+	<!-- <input type="button" id="removeRow"	name="removeRow"  value="Remove row" 	onclick="removeRow('main_table');" /> -->
+</div>
+
+<hr />
+
+<div id="encodeToMoodle">
+	<input type="button" id="encodeToMoodle" name="formaction" value="encode to Moodle code" onclick="getEncodeElement().value = encode();" /> 
+	<!--<input type="text" id="output" name="output" style="width: 1000px;" />
+	<br /> -->
+	<textarea id="output_textarea"></textarea>
+	
+	<button id="copyToClipboard" value="copy to clipboard" onclick="copyToClipboard();">
+		copy to clipboard
+	</button>
+	
+	<div id="messagearea">
+	</div>
+
+</div>
+		
+
+<!--
+<input type="button" name="blubb" value="ultimativer globaler test" onclick="alert(getAnswerCode(longstring));" style="display:none">
+-->
+
+<footer>
+feel free to distribute <br />
+version 1.0</br>
+or get in touch: <a href="mailto:achim.pfister@gmail.com">achim.pfister@gmail.com</a><br />
+or download from <a href="http://moodle.pfister.tech/moodle_cloze_quiz_editor.zip">http://moodle.pfister.tech/moodle_cloze_quiz_editor.zip</a><br />
+or visit online version at <a href="http://moodle.pfister.tech/moodle_close_quiz_editor.html">http://moodle.pfister.tech/moodle_close_quiz_editor.html</a><br />
+(sorry no https)
+</footer>
+</body>
+</html>

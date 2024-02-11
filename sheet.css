@@ -1,0 +1,122 @@
+
+
+
+fieldset {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+
+body {
+		font-family: sans-serif;
+		font-size: 11pt;
+}
+
+
+
+
+td.table_value_throttle {
+      width: 60px;
+      display: none;
+	  font-size: 11pt;
+}
+
+td.table_value_throttle input{
+      width: 40px;
+	  font-size: 11pt;
+}
+
+th {
+		font-style: bold;
+		padding-bottom: 10px;
+}
+
+td.table_value {
+		font-size: 11pt;
+		margin-left: 5px;
+		margin-right: 5px;
+		padding-left: 15px;
+		padding-right: 15px;
+}
+
+span.helplink {
+    float: right
+}
+
+span.helplink img {
+  border: none;
+}
+
+
+
+td label{
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+table {
+	margin-top: 20px;
+}
+
+div#top {
+		margin-top: 10px;
+		margin-bottom: 10px;
+}
+
+div#quiztype {
+	margin-bottom: 10px
+}
+
+div#row_management {
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+input {
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+div#encodeToMoodle {
+	margin-top: 20px;
+}
+
+div#messagearea {
+	margin-top: 10px;
+}
+
+input#encodeToMoodle {
+	display: block;
+	margin-bottom: 10px;
+}
+
+input#addRow {
+	width: 100px;
+}
+
+input#removeRow {
+	width: 100px;
+}
+
+button#copyToClipboard {
+	display: block;
+	margin-top: 10px;
+}
+
+
+select {
+	padding-bottom: 2px;
+	padding-top: 2px;
+}
+
+
+
+textarea {
+	height:120px;
+	width: 600px;
+	padding: 5px 5px 5px 5px;
+}
+
+footer {
+	text-align: right;
+}
